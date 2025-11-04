@@ -1,0 +1,25 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Laptop",
+            "price": 999.99,
+            "category": "Electronics",
+            "image": "laptop.png"
+        },
+        {
+            "id": 2,
+            "name": "Smartphone",
+            "price": 499.99,
+            "category": "Electronics",
+            "image": "laptop.png"
+        },
+        {
+            "id": 3,
+            "name": "Tablet",
+            "price": 299.99,
+            "category": "Electronics",
+            "image": "laptop.png"
+        }
+    ]
+}

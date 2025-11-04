@@ -1,0 +1,67 @@
+<!-- <div class="container">
+  <div class="header">
+    <h2>Employee List</h2>
+    <button class="btn btn-primary" (click)="addEmployee()">Add Employee</button>
+  </div>
+
+  <table class="employee-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Date of Birth</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.name }}</td>
+        <td>${{ employee.salary | number }}</td>
+        <td>{{ employee.dob | date:'mediumDate' }}</td>
+        <td class="actions">
+          <button class="btn btn-edit" (click)="editEmployee(employee.id)">Edit</button>
+          <button class="btn btn-delete" (click)="deleteEmployee(employee.id)">Delete</button>
+        </td>
+      </tr>
+      <tr *ngIf="employees.length === 0">
+        <td colspan="5" class="no-data">No employees found</td>
+      </tr>
+    </tbody>
+  </table>
+</div> --> 
+<div class="container">
+  <div class="header">
+    <h2>Employee List</h2>
+    <button class="btn btn-primary" (click)="addEmployee()">Add Employee</button>
+  </div>
+
+  <table class="employee-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Date of Birth</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.name }}</td>
+        <td>${{ employee.salary | number }}</td>
+        <td>{{ employee.dob | date:'mediumDate' }}</td>
+        <td class="actions">
+          <!-- FIX: Pass employee.id correctly -->
+          <button class="btn btn-edit" (click)="editEmployee(employee.id)">Edit</button>
+          <button class="btn btn-delete" (click)="deleteEmployee(employee.id)">Delete</button>
+        </td>
+      </tr>
+      <tr *ngIf="employees.length === 0">
+        <td colspan="5" class="no-data">No employees found. Click "Add Employee" to create one.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
